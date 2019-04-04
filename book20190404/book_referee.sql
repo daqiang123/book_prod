@@ -1,0 +1,54 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: 47.105.152.179    Database: book
+-- ------------------------------------------------------
+-- Server version	5.7.24
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `referee`
+--
+
+DROP TABLE IF EXISTS `referee`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `referee` (
+  `referee_id` varchar(32) NOT NULL COMMENT '推荐人主键',
+  `referee_name` varchar(50) DEFAULT NULL COMMENT '推荐人姓名',
+  `referee_summary` varchar(500) DEFAULT NULL COMMENT '推荐人简介',
+  `referee_sort` int(11) DEFAULT NULL COMMENT '推荐人排序',
+  `referee_state` tinyint(1) DEFAULT NULL COMMENT '推荐人状态',
+  PRIMARY KEY (`referee_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `referee`
+--
+
+LOCK TABLES `referee` WRITE;
+/*!40000 ALTER TABLE `referee` DISABLE KEYS */;
+INSERT INTO `referee` VALUES ('2c90115b6832e0a4016835b2c11f0003','朱苏力','朱苏力',1,1),('2c90115b6832e0a4016835b2e7050004','张建伟','张建伟',2,1),('2c90115b6832e0a4016835b305610005','梁治平','梁治平',3,1),('2c90115b6832e0a4016835b322940006','刘仁文','刘仁文',4,1),('402880e8688e97ca01688f545c6b0000','莫纪宏','莫纪宏',5,1),('402880e8688e97ca01688f54bb070001','龙宗智','龙宗智',6,1),('402880e8688e97ca01688f55906c0002','高绍先','高绍先',7,1),('402880e8688e97ca01688f568b970003','梁慧星','梁慧星',8,1),('402880e8688e97ca01688f56ab730004','徐国栋','徐国栋',9,1);
+/*!40000 ALTER TABLE `referee` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-04-04 16:52:59

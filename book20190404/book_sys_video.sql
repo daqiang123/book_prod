@@ -1,0 +1,59 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: 47.105.152.179    Database: book
+-- ------------------------------------------------------
+-- Server version	5.7.24
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `sys_video`
+--
+
+DROP TABLE IF EXISTS `sys_video`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sys_video` (
+  `video_id` varchar(32) NOT NULL COMMENT '图片主键',
+  `video_type` varchar(32) DEFAULT NULL COMMENT '图片类型',
+  `video_name` varchar(100) DEFAULT NULL COMMENT '图片名称',
+  `video_size` varchar(50) DEFAULT NULL COMMENT '图片大小',
+  `video_time` datetime DEFAULT NULL COMMENT '图片时间',
+  `video_path` varchar(100) DEFAULT NULL COMMENT '图片路径',
+  `video_suffix` varchar(50) DEFAULT NULL COMMENT '图片后缀',
+  `video_state` tinyint(1) DEFAULT NULL COMMENT '图片状态',
+  `video_remark` varchar(100) DEFAULT NULL COMMENT '图片备注',
+  `video_associated_id` varchar(32) DEFAULT NULL COMMENT '关联主键',
+  PRIMARY KEY (`video_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sys_video`
+--
+
+LOCK TABLES `sys_video` WRITE;
+/*!40000 ALTER TABLE `sys_video` DISABLE KEYS */;
+INSERT INTO `sys_video` VALUES ('2e48c512641f45928c76d7aa30398759',NULL,'p5513607-102-009-101925.mp4',NULL,'2019-01-21 11:15:33','video/201901/9ad43a5c81ec4d68ba9c17e436a65210','mp4',NULL,NULL,NULL),('3032269b60c745a0bd5c8bf9a67a76f1',NULL,'city.mp4',NULL,'2019-01-21 11:15:33','video/201901/e8423afbaf5c4e1aa363b2bdce2dd975','mp4',NULL,NULL,NULL),('3198b0f97b654176b1fc6eda5d26fbe0',NULL,'p6387506-102-009-120525.mp4',NULL,'2019-01-21 11:15:33','video/201901/b27918c17ddc4a8ea0c075fd0202e5d8','mp4',NULL,NULL,NULL),('4d4fdd75fef5433e84fe540f94917f1a',NULL,'p4314825-102-009-211025.mp4',NULL,'2019-01-21 11:15:33','video/201901/a508f142731c42728f5173a6a7c5fc25','mp4',NULL,NULL,NULL),('97e22eaf6bb84042b958c1007027a20b',NULL,'forest.mp4',NULL,'2019-01-21 11:15:33','video/201901/5ac880ba47944de7ba6af2ea918a1485','mp4',NULL,NULL,NULL),('a5fcf3768acb49ca81f39858429d2f9f',NULL,'Tropical.mp4',NULL,'2019-01-21 11:15:34','video/201901/d47eed01a70b4fa5b8c6e8446c371786','mp4',NULL,NULL,NULL),('f2f51a77e34b4f19ac9cf757fc3ea2ea',NULL,'4949407-102-009-0914.mp4',NULL,'2019-01-21 11:15:33','video/201901/7b6037143b1e4ae0ae09857220c92a15','mp4',NULL,NULL,NULL);
+/*!40000 ALTER TABLE `sys_video` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-04-04 16:53:17
